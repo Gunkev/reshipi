@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reshipi/screens/LoginScreen.dart';
+import 'package:reshipi/screens/SignInScreen.dart';
+import 'package:reshipi/screens/LogInScreen.dart';
 import 'package:reshipi/utilities/constants.dart';
 
 void main() => runApp(Reshipi());
@@ -20,7 +21,7 @@ class _ReshipiState extends State<Reshipi> {
         accentColor: kPinkColor,
       ),
       color: kPinkColor,
-      home: LoginScreen(),
+      home: LogInScreen(),
     );
   }
 }
