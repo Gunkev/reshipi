@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:reshipi/screens/SignInScreen.dart';
+import 'package:reshipi/screens/HomeScreen.dart';
+import 'package:reshipi/screens/SignUpScreen.dart';
 import 'package:reshipi/screens/LogInScreen.dart';
 import 'package:reshipi/utilities/constants.dart';
+import 'package:reshipi/screens/CategoryScreen.dart';
 
 void main() => runApp(Reshipi());
 
@@ -16,12 +18,16 @@ class _ReshipiState extends State<Reshipi> {
     return MaterialApp(
       title: 'a recipe application',
       theme: ThemeData(
-        scaffoldBackgroundColor: kPinkColor,
-        primaryColor: kPinkColor,
-        accentColor: kPinkColor,
+        primaryColor: kPrimaryColor,
       ),
       color: kPinkColor,
-      home: LogInScreen(),
+      initialRoute: SignUpScreen.id,
+      routes: {
+        SignUpScreen.id: (context)=> SignUpScreen(),
+        LogInScreen.id: (context)=> LogInScreen(),
+        HomeScreen.id: (context)=> HomeScreen(),
+        CategoryScreen.id: (context)=> CategoryScreen(),
+      },
     );
   }
 }

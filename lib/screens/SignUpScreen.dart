@@ -2,16 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:reshipi/utilities/constants.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
-import 'package:reshipi/components/WaveClipper.dart';
+import 'package:reshipi/components/TopWaveClipper.dart';
 import 'package:reshipi/components/ClipPathWidget.dart';
 import 'package:reshipi/components/ReusableButtons.dart';
+import 'package:reshipi/screens/LogInScreen.dart';
 
-class SignInScreen extends StatefulWidget {
+class SignUpScreen extends StatefulWidget {
+  static String id = 'signUpScreen';
   @override
-  _SignInScreenState createState() => _SignInScreenState();
+  _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,19 +26,22 @@ class _SignInScreenState extends State<SignInScreen> {
               Stack(
                 children: <Widget>[
                   ClipPathWidget(
+                    clipper: TopWaveClipper(),
                     height: 300.0,
                     colour: kPinkColor,
                   ),
                   ClipPathWidget(
+                    clipper: TopWaveClipper(),
                     height: 310.0,
                     colour: kSecondaryPinkColor,
                   ),
                   ClipPathWidget(
+                    clipper: TopWaveClipper(),
                     height: 320.0,
                     colour: kTertiaryPinkColor,
                   ),
                   ClipPath(
-                    clipper: WaveClipper(),
+                    clipper: TopWaveClipper(),
                     child: Container(
                       child: Padding(
                         padding: const EdgeInsets.only(top: 30.0),
@@ -85,10 +90,11 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                     SizedBox(height: kBigHorizontalSpace),
                     ReusableButton(
-                      onPress: () {},
-                      padding: EdgeInsets.all(20.0),
+                      onPress: () {Navigator.pushReplacementNamed(context, LogInScreen.id);},
+                      padding: EdgeInsets.all(15.0),
                       text: 'Sign In',
                       colour: kPinkColor,
+                      icon: EvaIcons.pieChart2,
                     ),
                     SizedBox(height: kMediumHorizontalSpace),
                     Text('or sign in with',
@@ -98,22 +104,24 @@ class _SignInScreenState extends State<SignInScreen> {
                     SizedBox(height: kMediumHorizontalSpace),
                     Row(
                       children: <Widget>[
-                        ReusableButton(
-                          onPress: () {},
-                          padding: EdgeInsets.only(top:12.0, bottom: 12.0, left: 20.0, right: 20.0),
-                          text: 'oogle',
-                          width: 155.0,
-                          colour: Colors.red,
-                          icon: EvaIcons.google,
+                        Expanded(
+                          child: ReusableButton(
+                            onPress: () {},
+                            padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                            text: 'oogle',
+                            colour: Colors.red,
+                            icon: EvaIcons.google,
+                          ),
                         ),
                         SizedBox(width: kMediumHorizontalSpace),
-                        ReusableButton(
-                          padding: EdgeInsets.only(top:12.0, bottom: 12.0, left: 20.0, right: 20.0),
-                          onPress: () {},
-                          text: 'acebook',
-                          width: 155.0,
-                          colour: kBlueColor,
-                          icon: EvaIcons.facebook,
+                        Expanded(
+                          child: ReusableButton(
+                            padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                            onPress: () {},
+                            text: 'acebook',
+                            colour: kBlueColor,
+                            icon: EvaIcons.facebook,
+                          ),
                         ),
                       ],
                     ),

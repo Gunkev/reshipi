@@ -7,6 +7,8 @@ const kSecondaryPinkColor = Color(0xbbf56666);
 const kTertiaryPinkColor = Color(0x66f56666);
 const kTransparentPinkColor = Color(0x22f56666);
 const kBlueColor = Color(0xff3f51b5);
+const kPrimaryColor = const Color(0x00ffffff);
+const kCardsIconSize = 15.0;
 const kLogoText = Text("EAT SAVE",
   style: TextStyle(
       color: kWhiteColor,
@@ -17,6 +19,7 @@ const kLogoText = Text("EAT SAVE",
 );
 const kMediumHorizontalSpace = 15.0;
 const kBigHorizontalSpace = 40.0;
+const kSmallVerticalSpace = 12.0;
 const kTextFieldAuthDecoration = InputDecoration(
     hintText: 'enter something',
     hintStyle: TextStyle(color: kSecondaryPinkColor),
@@ -30,4 +33,5 @@ const kTextFieldAuthDecoration = InputDecoration(
       borderSide: BorderSide(color: kPinkColor),
     )
 );
+const kSubHeaderTextStyle = TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold);
 
