@@ -2,11 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:reshipi/screens/CategoryScreen.dart';
-import 'package:reshipi/screens/HomeScreen.dart';
 import 'package:reshipi/utilities/constants.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:reshipi/components/TopWaveClipper.dart';
-import 'package:reshipi/components/BottomWaveClipper.dart';
 import 'package:reshipi/components/ClipPathWidget.dart';
 import 'package:reshipi/components/ReusableButtons.dart';
 

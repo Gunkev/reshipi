@@ -4,6 +4,7 @@ import 'package:reshipi/components/AppBarWidget.dart';
 import 'package:reshipi/components/BottomNavigation.dart';
 import 'package:reshipi/components/Cards.dart';
 import 'package:reshipi/components/FloatingButton.dart';
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = 'homeScreen';
@@ -23,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         preferredSize: Size.fromHeight(180.0),
         child: AppBarWidget(
           title: 'Home',
+//          icon: Icon(EvaIcons.home),
         ),
       ),
       body: SafeArea(
